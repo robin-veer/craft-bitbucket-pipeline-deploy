@@ -20,7 +20,9 @@ To install the plugin, follow these instructions.
 
         composer require aisleng/bitbucket-pipeline-deployment
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Bitbucket Pipeline Deployment.
+3. Copy the config file to the config folder in craft
+
+4. In the Control Panel, go to Settings → Plugins and click the “Install” button for Bitbucket Pipeline Deployment.
 
 ## Using Bitbucket Pipeline Deployment
 

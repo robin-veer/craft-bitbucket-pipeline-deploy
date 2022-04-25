@@ -22,11 +22,18 @@
  * you do for 'general.php'
  */
 
+use craft\helpers\App;
+
 return [
-    "buildHooks" => [[
-        'siteName' => '',
-        'branch' => '',
-        'workspaceSlug' => '',
-        'repoSlug' => ''
-    ]]
+    "bitbucketUser"     => App::env('BITBUCKET_USER'),
+    "bitbucketPassword" => App::env('BITBUCKET_PASSWORD'),
+    "buildHooks"        => [
+        [
+            'siteName'      => '',
+            'branch'        => '',
+            'workspaceSlug' => '',
+            'repoSlug'      => '',
+            'environment'   => '' // use 'development', 'staging' or 'production'
+        ],
+    ]
 ];

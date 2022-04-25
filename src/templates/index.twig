@@ -40,7 +40,7 @@
         <p>This will deploy your latest content to the production application.</p>
         
         {% for hook in buildHooks %}
-            {% if hook.branch == "production" %}
+            {% if hook.environment == "production" %}
                 <button class="btn deploy-btn deploy-prod-btn" data-workspace="{{ hook.workspaceSlug }}" data-repo="{{ hook.repoSlug }}" data-branch="{{ hook.branch }}">
                     Deploy {{ hook.siteName }}
                 </button>
@@ -51,7 +51,7 @@
         <h3 class="deploy-headline">Staging Builds</h3>
         <p>This will deploy your latest content to the staging application.</p>
         {% for hook in buildHooks %}
-            {% if hook.branch == "staging" %}
+            {% if hook.environment == "staging" %}
                 <button class="btn deploy-btn deploy-staging-btn" data-workspace="{{ hook.workspaceSlug }}" data-repo="{{ hook.repoSlug }}" data-branch="{{ hook.branch }}">
                     Deploy {{ hook.siteName }}
                 </button>
@@ -62,7 +62,7 @@
         <h3 class="deploy-headline">Development Builds</h3>
         <p>This will deploy your latest content to the development application.</p>
         {% for hook in buildHooks %}
-            {% if hook.branch == "development" %}
+            {% if hook.environment == "development" %}
                 <button class="btn deploy-btn deploy-dev-btn" data-workspace="{{ hook.workspaceSlug }}" data-repo="{{ hook.repoSlug }}" data-branch="{{ hook.branch }}">
                     Deploy {{ hook.siteName }}
                 </button>
